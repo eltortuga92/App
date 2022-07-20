@@ -1,0 +1,44 @@
+<header class="note__header">
+  <span class="note__header--left">
+    <input type="checkbox" (click)="onCompletedChange($event)" />
+    <span>{{ title }}</span>
+  </span>
+  <span class="note__severity-selector">
+    Severity:
+    <input
+      type="radio"
+      [name]="title + '-severity'"
+      value="imp"
+      (change)="onSeverityChange($event)"
+    />
+    <label for="imp">Important</label>
+
+    <input
+      type="radio"
+      [name]="title + '-severity'"
+      value="mod"
+      (change)="onSeverityChange($event)"
+    />
+    <label for="mod">Moderate</label>
+
+    <input
+      type="radio"
+      [name]="title + '-severity'"
+      value="low"
+      (change)="onSeverityChange($event)"
+    />
+    <label for="low">Low</label>
+  </span>
+</header>
+<main class="note__main" [style.background-color]="bgColor | async">
+  <textarea class="note__main-text" [value]="detail"></textarea>
+</main>
+<footer class="note__footer">
+  <button
+    mat-stroked-button
+    class="note__delete-button"
+    (click)="onDeleteClick()"
+  >
+    Delete
+  </button>
+</footer>

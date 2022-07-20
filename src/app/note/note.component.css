@@ -1,0 +1,47 @@
+:host {
+  display: block;
+  margin-bottom: 20px;
+  width: 400px;
+  border: 1px solid gray;
+  border-radius: 6px;
+}
+
+.note__header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  padding: 4px;
+}
+
+.note__header--left {
+  display: flex;
+  gap: 8px;
+}
+
+.note__severity-selector {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.note__main {
+  padding: 8px;
+}
+
+.note__main-text {
+  max-width: 100%;
+}
+
+.note__footer {
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid gray;
+  padding: 4px;
+}
+
+.note__delete-button {
+  height: 20px;
+  width: 36px;
+  font-size: 12px;
+  line-height: 20px;
+}

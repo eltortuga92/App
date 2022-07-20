@@ -1,0 +1,12 @@
+<button mat-flat-button class="app__add-button" (click)="onAddNoteClick()">
+  Add note
+</button>
+<app-note
+  *ngFor="let note of notes"
+  [title]="note.title"
+  [detail]="note.detail"
+  [completed]="note.completed"
+  (completeChange)="onCompletedChange($event, note.id)"
+  (deleteNote)="onDeleteNote(note.id)"
+>
+</app-note>
